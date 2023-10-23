@@ -183,6 +183,7 @@ nav button {
 	align-items: start;
 	justify-content: space-between;
 	gap: 40px;
+	flex-wrap: wrap;
 }
 .posts_container .post {
 	display: flex;

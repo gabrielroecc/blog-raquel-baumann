@@ -1,0 +1,97 @@
+main > div {
+	background-image: url(../img/banner-contato.svg);
+	height: 500px;
+}
+.containerheader {
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+.nav {
+	justify-content: space-between !important;
+	width: 100%;
+}
+.conteiner {
+	width: 100%;
+	max-width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+main > div > h2 {
+	color: #fff;
+	font-family: Poppins;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 700;
+}
+section {
+	padding: 180px 0;
+}
+section h2 {
+	color: #007c7b;
+	font-family: Poppins;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+
+	padding-bottom: 40px;
+}
+section > .conteiner {
+	display: flex;
+	flex-direction: column;
+}
+section div.fwrapper {
+	display: flex;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+	border-radius: 12px;
+	width: 100%;
+	background: #fff;
+	align-items: center;
+}
+section div img {
+	width: 50%;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	padding: 0 50px;
+	gap: 20px;
+}
+form > input {
+	border-radius: 4px;
+	background: #f5f5f5;
+	width: 100%;
+	height: 50px;
+	border: 0;
+	outline: 0;
+	padding: 0 0 0 10px;
+}
+.btn-form {
+	border-radius: 4px;
+	background: #00a9a8;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+}
+form input:last-child {
+	width: 224px;
+	height: 44.24px;
+	color: #fff;
+	text-align: center;
+	font-family: Poppins;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+@media (max-width: 1025px) {
+	.fwrapper img {
+		display: none;
+	}
+	form {
+		width: 100%;
+		padding: 50px;
+	}
+}

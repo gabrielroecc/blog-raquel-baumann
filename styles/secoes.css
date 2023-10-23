@@ -1,0 +1,61 @@
+.conteiner {
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+main h1 {
+	color: #005b5a;
+	font-family: Poppins;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	margin-top: 180px;
+}
+main h2 {
+	color: #00a9a8;
+	font-family: Poppins;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+main img {
+	width: 100%;
+	height: 50%;
+	object-fit: cover;
+	border-radius: 8px;
+
+	margin-top: 67px;
+	margin-bottom: 88px;
+}
+main p {
+	color: #00a9a8;
+	font-family: Poppins;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+main span {
+	color: #00a9a8;
+	font-family: Poppins;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+.btn {
+	display: block;
+	max-width: fit-content;
+	margin-top: 40px;
+}
+.blog {
+	padding: 180px 0 180px 0;
+}
+/* main > a{
+
+}
+
+img p a */

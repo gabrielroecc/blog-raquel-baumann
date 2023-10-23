@@ -1,39 +1,40 @@
-<!DOCTYPE html>
-<html lang="pt_BR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Raquel Baumann - Blog</title>
-		<link rel="stylesheet" href="./styles/style.css" />
-		<link
-			rel="stylesheet"
-			href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
-		<script
-			src="https://kit.fontawesome.com/5b8396100a.js"
-			crossorigin="anonymous"></script>
-	</head>
-	<body>
-		<section class="form_section add_post_form">
-			<div class="container form_section_container">
-				<h2>Adicionar um post</h2>
-				<div class="alert_message success">
-					<p>Mensagem de sucesso</p>
-				</div>
-				<form action="" enctype="multipart/form-data">
-					<input type="text" name="" placeholder="Título" id="" />
-					<textarea name="" placeholder="Texto" id=""></textarea>
-					<div class="form_control">
-						<input type="checkbox" name="" id="is_featured" />
-						<label for="is_featured">Destaque</label>
-					</div>
-					<div class="form_control">
-						<label for="thumbnail">Adicionar Imagem</label>
-						<input type="file" name="" id="thumbnail" />
-					</div>
+<?php
+include 'partials/header.php';
 
-					<button class="btn" type="submit">Criar Post</button>
-				</form>
-			</div>
-		</section>
-	</body>
+$title = $_SESSION['add-post-data']['title'] ?? null;
+$body = $_SESSION['add-post-data']['body'] ?? null;
+
+unset($_SESSION['add-post-data']);
+
+$errors = $_SESSION['add-post-errors'] ?? array(); // Recupera os erros
+
+?>
+<section class="form_section add_post_form">
+    <div class="container form_section_container">
+        <h2>Adicionar um post</h2>
+        <?php foreach ($errors as $error) : ?>
+            <div class="alert_message error">
+                <p><?= $error ?></p>
+            </div>
+        <?php endforeach; ?>
+        <form action="<?= ROOT_URL ?>admin/add-post-logic.php" enctype="multipart/form-data" method="POST">
+            <input type="text" name="title" placeholder="Título" id="" value="<?= $title ?>"/>
+            <textarea name="body" rows="10" placeholder="Texto" id=""><?= $body ?></textarea>
+            <div class="form_control">
+                <input type="checkbox" name="is_featured" id="is_featured" value="1" checked/>
+                <label for="is_featured">Destaque</label>
+            </div>
+            <div class="form_control">
+                <label for="thumbnail">Adicionar Imagem</label>
+                <input type="file" name="thumbnail" id="thumbnail" accept="image/*" />
+            </div>
+
+            <button class="btn" name="submit" type="submit">Criar Post</button>
+        </form>
+    </div>
+</section>
+<?php
+include '../partials/footer.php';
+?>
+</body>
 </html>
