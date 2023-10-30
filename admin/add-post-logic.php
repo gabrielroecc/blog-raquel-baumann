@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
         $allowed_files = ['png', 'jpg', 'jpeg', 'webp'];
         $extention = pathinfo($thumbnail_name, PATHINFO_EXTENSION);
         if (in_array($extention, $allowed_files)) {
-            if ($thumbnail['size'] < 2_000_000) {
+            if ($thumbnail['size'] < 10_000_000) {
                 move_uploaded_file($thumbnail_tmp_name, $thumbnail_destination_path);
             } else {
                 $errors[] = "O tamanho da imagem é muito grande! A imagem precisa ter menos que 2 MB";

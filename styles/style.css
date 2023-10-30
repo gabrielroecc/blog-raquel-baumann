@@ -28,7 +28,7 @@ body {
 /* NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV NAV */
 
 .nav_logo img {
-	width: 50px;
+	width: 72px;
 	filter: brightness(100);
 }
 .user_img {
@@ -45,7 +45,7 @@ nav {
 	background: #00a9a8;
 	box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.2);
 	backdrop-filter: blur(10px);
-	padding: 10px 0;
+	padding: 20px 0;
 }
 nav button {
 	display: none;
@@ -187,20 +187,21 @@ nav button {
 }
 .posts_container .post {
 	display: flex;
-	align-items: center;
-	justify-content: center;
 	flex-direction: column;
+	height: 580px;
 }
 .posts_container .post_thumbnail {
 	max-width: 370px;
 	height: 251px;
+	width: 100%;
 }
 .posts_container .post_thumbnail img {
 	max-width: 370px;
 	height: 251px;
+	width: 100%;
 }
 .posts_container .post_info {
-	padding: 20px 0 20px 0;
+	padding: 20px;
 }
 .posts_container .post_info .post_title a {
 	color: #007c7b;
@@ -301,7 +302,7 @@ footer p {
 .singlepost_thumbnail {
 	width: 100%;
 	max-width: 1280px;
-	height: 357px;
+	height: 600px;
 	object-fit: cover;
 	border-radius: 12px;
 	margin: 40px 0;
@@ -310,9 +311,20 @@ footer p {
 .singlepost_thumbnail img {
 	width: 100%;
 	max-width: 1280px;
-	height: 357px;
+	height: 100%;
 	object-fit: cover;
 	border-radius: 12px;
+	object-position: center 10%;
+}
+@media (max-wdith: 1025) {
+	.singlepost_thumbnail img {
+		width: 100%;
+		max-width: 1280px;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 12px;
+		object-position: top;
+	}
 }
 .singlepost_container p {
 	color: #00a9a8;

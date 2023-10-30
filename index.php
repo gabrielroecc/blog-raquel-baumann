@@ -17,22 +17,58 @@
 	</head>
 	<body>
 		<!-----------------HEADER----------------->
-		<header>
+		<header class="header_desk">
 			<div class="conteiner">
-				<nav>
+				<nav class="nav_desk">
 					<a href="index.php" class="logo">
 						<img src="<?= ROOT_URL ?>img/logo1.svg" alt="" />
 					</a>
 					<ul>
-						<li><a href="">Produtos</a></li>
+						<li><a href="">Produtos</a>
+							<ul class="submenu">
+								<li class="submenu-item"><a href="secoes.php">Hipnoterapia Clínica</a></li>
+								<li><a href="secoes2.php">Coaching Sistêmico Personalizado</a></li>
+								<li><a href="secoes3.php">Análise de Perfil Comportamental</a></li>
+								<li><a href="secoes4.php">Cursos e Workshops</a></li>
+								<li><a href="secoes5.php">Áudios Terapeuticos</a></li>
+								<li><a href="secoes5.php">E-books</a></li>
+							</ul>
+						</li>
 						<li><a href="blog-home.php">Meu blog</a></li>
 						<li><a href="#section4">Sobre mim</a></li>
-						<li><a href="contato.html">Contato</a></li>
+						<li><a href="contato.php">Contato</a></li>
 					</ul>
 					<a href="#" class="btn">Agendar uma consulta</a>
 				</nav>
+
+				<nav class="nav_mob">
+					<a href="index.php" class="logo">
+						<img src="<?= ROOT_URL ?>img/logo1.svg" alt="" />
+					</a>
+					
+					<div class="nav_mob_items">
+					<img src="./img/menumob.svg" alt="" class="menumob">
+					<ul class="ul_mob">
+						<li><a href="">Produtos</a><span class="see_more" style="font-size: 10px; margin-left:10px">Ver mais</span>
+							<ul class="submenu_mob">
+								<li class="submenu-item"><a href="secoes.php">Hipnoterapia Clínica</a></li>
+								<li><a href="secoes2.php">Coaching Sistêmico Personalizado</a></li>
+								<li><a href="secoes3.php">Análise de Perfil Comportamental</a></li>
+								<li><a href="secoes4.php">Cursos e Workshops</a></li>
+								<li><a href="secoes5.php">Áudios Terapeuticos</a></li>
+								<li><a href="secoes5.php">E-books</a></li>
+							</ul>
+						</li>
+						<li><a href="blog-home.php">Meu blog</a></li>
+						<li><a href="#section4">Sobre mim</a></li>
+						<li><a href="contato.php">Contato</a></li>
+					</ul>
+					</div>
+				</nav>
 			</div>
 		</header>
+
+	
 		<!-----------------SECTION 1----------------->
 		<section class="section-1">
 			<div class="conteiner">
@@ -101,31 +137,31 @@
 				<h2>Conheça meus produtos</h2>
 				<p>Ofereço uma variedade de serviços, incluindo:</p>
 				<div class="cards-wrapper">
-					<a href="secoes.html"
+					<a href="secoes.php"
 						><div class="card">
 							<img src="img/icon-hipnoterapia.svg" alt="" />
 							<p>Hipnoterapia Clínica</p>
 						</div></a
 					>
-					<a href="secoes4.html">
+					<a href="secoes4.php">
 						<div class="card">
 							<img src="img/icon-coaching-s-p.svg" alt="" />
 							<p>Coaching Sistêmico Personalizado</p>
 						</div></a
 					>
-					<a href="secoes2.html">
+					<a href="secoes2.php">
 						<div class="card">
 							<img src="img/icon-coaching-s-p.svg" alt="" />
 							<p>Análise de Perfil Comportamental</p>
 						</div></a
 					>
-					<a href="secoes5.html">
+					<a href="secoes5.php">
 						<div class="card">
 							<img src="img/icon-coaching-s-p.svg" alt="" />
 							<p>Cursos e Workshops</p>
 						</div>
 					</a>
-					<a href="secoes1.html">
+					<a href="secoes1.php">
 						<div class="card">
 							<img src="img/icon-coaching-s-p.svg" alt="" />
 							<p>Áudios Terapeuticos</p>
@@ -135,7 +171,7 @@
 						<img src="img/icon-coaching-s-p.svg" alt="" />
 						<p>Palestras</p>
 					</div> -->
-					<a href="secoes3.html">
+					<a href="secoes3.php">
 						<div class="card">
 							<img src="img/icon-coaching-s-p.svg" alt="" />
 							<p>E-books</p>
@@ -294,5 +330,14 @@
 		<footer>
 			<p>Todos os direitos reservados - Raquel Baumann</p>
 		</footer>
+		<script>
+			document.querySelector(".menumob").addEventListener("click", ()=>{
+				document.querySelector(".ul_mob").classList.toggle('active');
+
+				document.querySelector(".see_more").addEventListener("click", ()=>{
+					document.querySelector(".submenu_mob").classList.toggle("active")
+				})
+			})
+		</script>
 	</body>
 </html>

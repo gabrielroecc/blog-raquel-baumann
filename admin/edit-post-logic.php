@@ -30,7 +30,7 @@ if(isset($_POST['submit'])){
             $extension = explode('.' , $thumbnail_name);
             $extension = end($extension);
             if (in_array($extension, $allowed_files)) {
-                if($thumbnail['size'] < 2000000){
+                if($thumbnail['size'] < 10000000){
                     move_uploaded_file($thumbnail_tmp_name, $thumbnail_destination_path);
                 }else{
                     $_SESSION['edit-post'] = "O tamanho da imagem é muito grande!";
