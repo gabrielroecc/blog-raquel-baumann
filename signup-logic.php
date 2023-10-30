@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
                 $picture_tmp_name = $picture['tmp_name'];
                 $picture_destination_path = 'img/' . $picture_name;
     
-                $allowed_files = ['png', 'jpg', 'jpeg'];
+                $allowed_files = ['png', 'jpg', 'jpeg', 'webp'];
                 $extention = explode('.', $picture_name);
                 $extention = end($extention);
                 if(in_array($extention, $allowed_files)){

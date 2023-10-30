@@ -49,7 +49,7 @@ if(isset($_POST['submit'])){
             $zero_all_is_featured_result = mysqli_query($connection, $zero_all_is_featured_query);
         }
 
-        $thumbnail_to_insert = $thumnail_name ?? $previous_thumbnail_name;
+        $thumbnail_to_insert = $thumbnail_name ?? $previous_thumbnail_name;
 
         $query = "UPDATE posts SET title='$title', body='$body', thumbnail='$thumbnail_to_insert', is_featured=$is_featured WHERE id=$id LIMIT 1";
         $result = mysqli_query($connection, $query);
